@@ -1,0 +1,7 @@
+RewriteEngine On
+# If someone is looking for non existing FILE
+RewriteCond ${REQUEST_FILENAME} !-f
+# If someone is looking for non existing FOLDER
+RewriteCond ${REQUEST_FILENAME} !-d
+# Go to INDEX.php
+RewriteRule ^ index.php [QSA,L]
